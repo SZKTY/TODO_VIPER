@@ -6,3 +6,33 @@
 //
 
 import Foundation
+
+protocol TodoListUsecase {
+    func fetchTodos()
+    func deleteTodo(row: Int)
+}
+
+final class TodoListInteractor {
+    weak var presenter: TodoListPresentation?
+}
+
+extension TodoListInteractor: TodoListUsecase {
+    
+    func fetchTodos(){
+        if UserDefaults.standard.object(forKey: .todoList) != nil {
+            print("todoあります")
+            guard let todos = UserDefaults.standard.object(forKey: .todoList) as? [[String]] else { return }
+            print(todos)
+            self.presenter?.didFetchedTodos(todos)
+        } else {
+            print("空です")
+        }
+    }
+    
+    func deleteTodo(row: Int) {
+//        guard var todos = UserDefaults.standard.object(forKey: .todoList) as? [[String]] else { return }
+//        todos.remove(at: row)
+//        UserDefaults.standard.set(todos, forKey: .todoList)
+        print("完了", row)
+    }
+}

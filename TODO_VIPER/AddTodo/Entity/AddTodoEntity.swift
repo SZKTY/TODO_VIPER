@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct AddTodoEntity {
+    let title: String
+    let body: String
+}
+

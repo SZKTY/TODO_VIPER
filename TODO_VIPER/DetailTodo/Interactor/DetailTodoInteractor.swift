@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+protocol DetailTodoUsecase: AnyObject {
+    
+}
+
+final class DetailTodoInteractor {
+    weak var presenter: DetailTodoPresentaion?
+}
+
+extension DetailTodoInteractor: DetailTodoUsecase {
+    
+}

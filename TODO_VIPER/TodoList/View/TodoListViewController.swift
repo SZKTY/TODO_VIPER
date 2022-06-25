@@ -17,9 +17,15 @@ final class TodoListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
     
-    var todoListEntities = [TodoListEntity]()
+    private var repositories: [TodoListEntity] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
-    private var presenter: TodoListPresentation! //nil になる
+    var presenter: TodoListPresentation! //nilを避けるためにSceneDelegateで依存性注入
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,36 +33,64 @@ final class TodoListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         addButton.addTarget(self, action: #selector(tappedAddButton), for: .touchUpInside)
+        
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UserDefaults.standard.removeObject(forKey: .todoList)
+        self.presenter.viewWillAppear()
+    }
+    
+    func inject(presenter: TodoListPresenter){
+        self.presenter = presenter
+    }
+    
 }
 
 @objc private extension TodoListViewController {
     
     func tappedAddButton() {
         //Presenterにイベントを通知
-        self.presenter?.tappedAddButton()
+        self.presenter.tappedAddButton()
+        
     }
 }
+
+extension TodoListViewController: TodoListView {
+    
+    func showTodos(_ todoListEntities: [TodoListEntity]) {
+        self.repositories = todoListEntities
+    }
+    
+    func showEmpty() {
+        print("空です")
+    }
+}
+
 
 extension TodoListViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        self.presenter.didSelect(todo: repositories[indexPath.row])
     }
     
 }
 
-extension TodoListViewController: UITableViewDataSource {
-    
+extension TodoListViewController: UITableViewDataSource, Finish {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todoListEntities.count
+        return repositories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TodoListTableViewCell
-        cell.tittleLabel?.text = todoListEntities[indexPath.row].title
+        cell.tittleLabel?.text = repositories[indexPath.row].title
+        cell.delegate = self
         return cell
+    }
+    
+    func tappedFinishButton(row: Int) {
+        self.presenter.tappedFinishButton(row: row)
     }
     
     

@@ -7,21 +7,43 @@
 
 import UIKit
 
-
-
 protocol TodoListWireframe: AnyObject {
     func addTodo()
+    func detailTodo()
 }
 
-class ArticleListRouter: TodoListWireframe {
+final class TodoListRouter {
+    // 画面遷移のためにViewControllerが必要。initで受け取る
+    private unowned let viewController: UIViewController
     
-    weak var view: UIViewController!
-    
-    init(view: UIViewController) {
-        self.view = view
+    private init(viewController: UIViewController) {
+        self.viewController = viewController
     }
     
+    static func assembleModules() -> UIViewController {
+        let view = UIStoryboard.todoList.instantiateInitialViewController() as! TodoListViewController
+        let intractor = TodoListInteractor()
+        let router = TodoListRouter(viewController: view)
+        // presenterが中継役なので、全てと繋げる
+        let presenter = TodoListPresenter(view: view,
+                                          interactor: intractor,
+                                          router: router)
+        intractor.presenter = presenter
+        // viewからpresenterに通知する必要があるため繋ぐ
+        view.inject(presenter: presenter)
+        return view
+    }
+}
+
+extension TodoListRouter: TodoListWireframe {
     func addTodo() {
-        print("入力画面へ遷移する")
+        let next = AddTodoRouter.assembleModules()
+        viewController.show(next: next)
+    }
+    
+    func detailTodo() {
+        print("画面遷移")
+        let next = DetailTodoRouter.assembleModules()
+        viewController.show(next: next)
     }
 }

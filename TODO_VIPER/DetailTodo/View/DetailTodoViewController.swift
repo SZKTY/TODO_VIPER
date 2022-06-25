@@ -7,23 +7,37 @@
 
 import UIKit
 
+protocol DetailTodoView: AnyObject {
+    
+}
+
 class DetailTodoViewController: UIViewController {
 
+    @IBOutlet weak var todoLabel: UILabel!
+    @IBOutlet weak var memoLabel: UILabel!
+    @IBOutlet weak var finishButton: UIButton!
+    
+    var presenter: DetailTodoPresentaion!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        finishButton.addTarget(self, action: #selector(tappedFinishButton), for: .touchUpInside)
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func inject(presenter: DetailTodoPresenter) {
+        self.presenter = presenter
     }
-    */
+    
+}
 
+@objc private extension DetailTodoViewController {
+    
+    func tappedFinishButton() {
+        print("完了")
+    }
+}
+
+extension DetailTodoViewController: DetailTodoView {
+    
 }
