@@ -17,17 +17,16 @@ final class AddTodoInteractor {
 
 extension AddTodoInteractor: AddTodoUsecase {
     func saveTodo(todo: [String]) {
-        print("Todo: \(todo.first), memo: \(todo.last)")
         
         if UserDefaults.standard.object(forKey: .todoList) != nil {
             var todoKobetsunonakami = UserDefaults.standard.object(forKey: .todoList) as! [[String]]
             todoKobetsunonakami.append(todo)
             UserDefaults.standard.set(todoKobetsunonakami, forKey: .todoList)
-            presenter?.addedTodo()
+            presenter?.addedTodo(row: todoKobetsunonakami.count - 1)
         } else {
             let matrixTodo: [[String]] = [todo]
             UserDefaults.standard.set(matrixTodo, forKey: .todoList)
-            presenter?.addedTodo()
+            presenter?.addedTodo(row: 0)
         }
     }
 }

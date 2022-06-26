@@ -9,7 +9,6 @@ import UIKit
 
 protocol TodoListView: AnyObject {
     func showTodos(_ todoListEntities: [TodoListEntity])
-    func showEmpty()
 }
 
 final class TodoListViewController: UIViewController {
@@ -29,7 +28,7 @@ final class TodoListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.title = "TodoList"
         tableView.delegate = self
         tableView.dataSource = self
         addButton.addTarget(self, action: #selector(tappedAddButton), for: .touchUpInside)
@@ -38,7 +37,7 @@ final class TodoListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        UserDefaults.standard.removeObject(forKey: .todoList)
+//        UserDefaults.standard.removeObject(forKey: .todoList)
         self.presenter.viewWillAppear()
     }
     
@@ -63,16 +62,13 @@ extension TodoListViewController: TodoListView {
         self.repositories = todoListEntities
     }
     
-    func showEmpty() {
-        print("空です")
-    }
 }
 
 
 extension TodoListViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.presenter.didSelect(todo: repositories[indexPath.row])
+        self.presenter.didSelect(row: indexPath.row)
     }
     
 }

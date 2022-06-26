@@ -8,7 +8,7 @@
 import UIKit
 
 protocol AddTodoWireframe: AnyObject {
-    func addedTodo()
+    func addedTodo(row: Int)
 }
 
 final class AddTodoRouter {
@@ -36,9 +36,8 @@ final class AddTodoRouter {
 
 extension AddTodoRouter: AddTodoWireframe {
     
-    func addedTodo() {
-        viewController.navigationController?.popViewController(animated: true)
-        let next = DetailTodoRouter.assembleModules()
+    func addedTodo(row: Int) {
+        let next = DetailTodoRouter.assembleModules(row: row)
         viewController.show(next: next)
     }
 }

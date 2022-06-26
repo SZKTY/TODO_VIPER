@@ -9,7 +9,7 @@ import UIKit
 
 protocol TodoListWireframe: AnyObject {
     func addTodo()
-    func detailTodo()
+    func detailTodo(row: Int)
 }
 
 final class TodoListRouter {
@@ -41,9 +41,8 @@ extension TodoListRouter: TodoListWireframe {
         viewController.show(next: next)
     }
     
-    func detailTodo() {
-        print("画面遷移")
-        let next = DetailTodoRouter.assembleModules()
+    func detailTodo(row: Int) {
+        let next = DetailTodoRouter.assembleModules(row: row)
         viewController.show(next: next)
     }
 }

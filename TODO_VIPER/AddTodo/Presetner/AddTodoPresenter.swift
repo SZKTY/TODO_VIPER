@@ -9,7 +9,7 @@ import Foundation
 
 protocol AddTodoPresentaion: AnyObject {
     func tappedSaveButton(todo: [String])
-    func addedTodo()
+    func addedTodo(row: Int)
 }
 
 final class AddTodoPresenter {
@@ -33,8 +33,8 @@ extension AddTodoPresenter: AddTodoPresentaion {
         self.interactor.saveTodo(todo: todo)
     }
     
-    func addedTodo() {
-        self.router.addedTodo()
+    func addedTodo(row: Int) {
+        self.router.addedTodo(row: row)
     }
     
 }

@@ -20,9 +20,7 @@ extension TodoListInteractor: TodoListUsecase {
     
     func fetchTodos(){
         if UserDefaults.standard.object(forKey: .todoList) != nil {
-            print("todoあります")
             guard let todos = UserDefaults.standard.object(forKey: .todoList) as? [[String]] else { return }
-            print(todos)
             self.presenter?.didFetchedTodos(todos)
         } else {
             print("空です")
@@ -30,9 +28,9 @@ extension TodoListInteractor: TodoListUsecase {
     }
     
     func deleteTodo(row: Int) {
-//        guard var todos = UserDefaults.standard.object(forKey: .todoList) as? [[String]] else { return }
-//        todos.remove(at: row)
-//        UserDefaults.standard.set(todos, forKey: .todoList)
-        print("完了", row)
+        guard var todos = UserDefaults.standard.object(forKey: .todoList) as? [[String]] else { return }
+        todos.remove(at: row)
+        UserDefaults.standard.set(todos, forKey: .todoList)
+        self.presenter?.viewWillAppear()
     }
 }

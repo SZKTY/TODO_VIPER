@@ -22,6 +22,8 @@ class AddTodoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "AddTodo"
+        self.saveButton.isEnabled = false
         todoTextField.delegate = self
         memoTextField.delegate = self
         saveButton.addTarget(self, action: #selector(tappedSaveButton), for: .touchUpInside)
@@ -43,6 +45,16 @@ extension AddTodoViewController: AddTodoView {
 }
 
 extension AddTodoViewController: UITextFieldDelegate {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        guard let text = todoTextField.text else { return }
+
+        if text.count > 0 {
+            self.saveButton.isEnabled = true
+        }else{
+            self.saveButton.isEnabled = false
+        }
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

@@ -11,7 +11,7 @@ protocol TodoListPresentation: AnyObject {
     func viewWillAppear()
     func didFetchedTodos(_ todos: [[String]])
     func tappedAddButton()
-    func didSelect(todo: TodoListEntity)
+    func didSelect(row: Int)
     func tappedFinishButton(row: Int)
 }
 
@@ -50,9 +50,8 @@ extension TodoListPresenter: TodoListPresentation {
         self.router.addTodo()
     }
     
-    func didSelect(todo: TodoListEntity) {
-        print(todo.title)
-        self.router.detailTodo()
+    func didSelect(row: Int) {
+        self.router.detailTodo(row: row)
     }
     
     func tappedFinishButton(row: Int) {
