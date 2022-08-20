@@ -8,29 +8,38 @@
 import Foundation
 
 protocol TodoListUsecase {
+    var output: TodoListInteractorOutput? { get }
+    
     func fetchTodos()
     func deleteTodo(row: Int)
 }
 
 final class TodoListInteractor {
     weak var presenter: TodoListPresentation?
+    weak var output: TodoListInteractorOutput?
+    private let userDefaults: UserDefaults
+    
+    init(userDefaults: UserDefaults = UserDefaults.standard) {
+        self.userDefaults = userDefaultscd
+    }
 }
 
 extension TodoListInteractor: TodoListUsecase {
-    
-    func fetchTodos(){
-        if UserDefaults.standard.object(forKey: .todoList) != nil {
-            guard let todos = UserDefaults.standard.object(forKey: .todoList) as? [[String]] else { return }
-            self.presenter?.didFetchedTodos(todos)
+    func fetchTodos() {
+        if let todos = userDefaults.object(forKey: .todoList) as? [[String]] {
+            output?.getSuccess(todos)
         } else {
-            print("空です")
+            output?.getFailure()
         }
     }
-    
+
     func deleteTodo(row: Int) {
-        guard var todos = UserDefaults.standard.object(forKey: .todoList) as? [[String]] else { return }
+        guard var todos = userDefaults.object(forKey: .todoList) as? [[String]] else {
+            output?.getFailure()
+            return
+        }
         todos.remove(at: row)
-        UserDefaults.standard.set(todos, forKey: .todoList)
+        userDefaults.set(todos, forKey: .todoList)
         self.presenter?.viewWillAppear()
     }
 }

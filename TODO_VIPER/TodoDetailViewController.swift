@@ -8,20 +8,20 @@
 import UIKit
 
 class TodoDetailViewController: UIViewController {
-    
+
     enum Row: String {
         case title
         case body
-        
-        static var rows: [Row]{
+
+        static var rows: [Row] {
             return [.title, .body]
         }
-    } //ここの理解が足りない
-    
+    } // ここの理解が足りない
+
     var todoEntity: TodoListEntity!
-    
+
     @IBOutlet weak var tableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -30,11 +30,11 @@ class TodoDetailViewController: UIViewController {
 }
 
 extension TodoDetailViewController: UITableViewDelegate, UITableViewDataSource {
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = Row.rows[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: row.rawValue, for: indexPath)
-        
+
         if row == .title {
             cell.textLabel?.text = "タイトル"
             cell.detailTextLabel?.text = todoEntity.title
@@ -45,7 +45,7 @@ extension TodoDetailViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Row.rows.count
     }

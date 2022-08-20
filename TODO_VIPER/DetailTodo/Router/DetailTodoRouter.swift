@@ -15,11 +15,11 @@ protocol DetailTodoWireframe: AnyObject {
 final class DetailTodoRouter {
     // 画面遷移のためにViewControllerが必要。initで受け取る
     private unowned let viewController: UIViewController
-    
+
     private init(viewController: UIViewController) {
         self.viewController = viewController
     }
-    
+
     static func assembleModules(row: Int) -> UIViewController {
         let view = UIStoryboard.detailTodo.instantiateInitialViewController() as! DetailTodoViewController
         let interactor = DetailTodoInteractor()
@@ -40,7 +40,7 @@ extension DetailTodoRouter: DetailTodoWireframe {
     func tappedBackButton() {
         self.viewController.navigationController?.popToRootViewController(animated: true)
     }
-    
+
     func deletedTodo() {
         self.viewController.navigationController?.popToRootViewController(animated: true)
     }

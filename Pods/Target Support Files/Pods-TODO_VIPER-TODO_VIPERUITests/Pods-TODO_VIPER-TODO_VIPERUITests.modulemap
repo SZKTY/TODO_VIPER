@@ -1,0 +1,6 @@
+framework module Pods_TODO_VIPER_TODO_VIPERUITests {
+  umbrella header "Pods-TODO_VIPER-TODO_VIPERUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

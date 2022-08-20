@@ -8,9 +8,9 @@
 import UIKit
 
 extension UIViewController {
-    
+
     static var identifier: String { String(describing: self) }
-    
+
     func show(next: UIViewController, animated: Bool = true, completion: (() -> Void)? = nil) {
         DispatchQueue.main.async {
             if let nav = self.navigationController {
@@ -22,5 +22,5 @@ extension UIViewController {
             }
         }
     }
-    
+
 }

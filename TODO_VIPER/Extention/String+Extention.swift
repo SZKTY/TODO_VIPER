@@ -8,7 +8,7 @@
 import Foundation
 
 extension String {
-    
+
     static let todoList = "TodoList"
     static let addTodo = "AddTodo"
     static let detailTodo = "DetailTodo"

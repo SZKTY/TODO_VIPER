@@ -35,7 +35,7 @@ final class AddTodoRouter {
 }
 
 extension AddTodoRouter: AddTodoWireframe {
-    
+
     func addedTodo(row: Int) {
         let next = DetailTodoRouter.assembleModules(row: row)
         viewController.show(next: next)

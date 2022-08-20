@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FBAFBA58AFA3A9BE569246C /* Pods_TODO_VIPERTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F39625B71AAFF9AE01DDFCD /* Pods_TODO_VIPERTests.framework */; };
 		5616A7002860BA28006EFE81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616A6FF2860BA28006EFE81 /* AppDelegate.swift */; };
 		5616A7022860BA28006EFE81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616A7012860BA28006EFE81 /* SceneDelegate.swift */; };
 		5616A7042860BA28006EFE81 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616A7032860BA28006EFE81 /* TodoListViewController.swift */; };
 		5616A7072860BA28006EFE81 /* TodoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5616A7052860BA28006EFE81 /* TodoList.storyboard */; };
 		5616A7092860BA29006EFE81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5616A7082860BA29006EFE81 /* Assets.xcassets */; };
 		5616A70C2860BA29006EFE81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5616A70A2860BA29006EFE81 /* LaunchScreen.storyboard */; };
-		5616A7172860BA29006EFE81 /* TODO_VIPERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616A7162860BA29006EFE81 /* TODO_VIPERTests.swift */; };
-		5616A7212860BA29006EFE81 /* TODO_VIPERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616A7202860BA29006EFE81 /* TODO_VIPERUITests.swift */; };
-		5616A7232860BA29006EFE81 /* TODO_VIPERUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616A7222860BA29006EFE81 /* TODO_VIPERUITestsLaunchTests.swift */; };
+		5616A7212860BA29006EFE81 /* TODOVIPERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616A7202860BA29006EFE81 /* TODOVIPERUITests.swift */; };
+		5616A7232860BA29006EFE81 /* TODOVIPERUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616A7222860BA29006EFE81 /* TODOVIPERUITestsLaunchTests.swift */; };
 		5616A730286138E5006EFE81 /* TodoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616A72F286138E5006EFE81 /* TodoListTableViewCell.swift */; };
 		5616A7322861F3A6006EFE81 /* TodoListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616A7312861F3A6006EFE81 /* TodoListEntity.swift */; };
 		5616A73828620220006EFE81 /* TodoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616A73728620220006EFE81 /* TodoListRouter.swift */; };
@@ -36,6 +36,15 @@
 		5616A76928672AB8006EFE81 /* DetailTodoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616A76828672AB8006EFE81 /* DetailTodoPresenter.swift */; };
 		5616A76B28672AD0006EFE81 /* DetailTodoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616A76A28672AD0006EFE81 /* DetailTodoRouter.swift */; };
 		5616A76D2867399D006EFE81 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616A76C2867399D006EFE81 /* UIResponder.swift */; };
+		56529E712898076A00B5D7EB /* TodoListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56529E702898076A00B5D7EB /* TodoListInteractorOutput.swift */; };
+		56D6023728965BA10094A7C0 /* TodoListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6023628965BA10094A7C0 /* TodoListInteractorTests.swift */; };
+		56D6023928965C540094A7C0 /* TodoListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6023828965C540094A7C0 /* TodoListPresenterTests.swift */; };
+		56D6023B28965DF50094A7C0 /* MockTodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6023A28965DF50094A7C0 /* MockTodoListPresenter.swift */; };
+		56D6023F28965F340094A7C0 /* MockTodoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6023E28965F340094A7C0 /* MockTodoListRouter.swift */; };
+		56D602412896607A0094A7C0 /* MockTodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D602402896607A0094A7C0 /* MockTodoListView.swift */; };
+		56D60243289660EE0094A7C0 /* MockTodoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D60242289660EE0094A7C0 /* MockTodoListInteractor.swift */; };
+		5E498224BDDBE3CE1796C88D /* Pods_TODO_VIPER_TODO_VIPERUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2A6BF0A8CE007FB6019CD1 /* Pods_TODO_VIPER_TODO_VIPERUITests.framework */; };
+		7A5B0CC9BE6E26809FA00C4B /* Pods_TODO_VIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D8430063DEA68D3599F6FB /* Pods_TODO_VIPER.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +65,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C3C5CD53709362F574B449E /* Pods-TODO_VIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO_VIPER.release.xcconfig"; path = "Target Support Files/Pods-TODO_VIPER/Pods-TODO_VIPER.release.xcconfig"; sourceTree = "<group>"; };
+		41CE7CDC79EE655FEF7C3198 /* Pods-TODO_VIPERTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO_VIPERTests.release.xcconfig"; path = "Target Support Files/Pods-TODO_VIPERTests/Pods-TODO_VIPERTests.release.xcconfig"; sourceTree = "<group>"; };
+		51E0D7A380525F9601FFD946 /* Pods-TODO_VIPERTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO_VIPERTests.debug.xcconfig"; path = "Target Support Files/Pods-TODO_VIPERTests/Pods-TODO_VIPERTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5616A6FC2860BA28006EFE81 /* TODO_VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TODO_VIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5616A6FF2860BA28006EFE81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5616A7012860BA28006EFE81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,10 +77,9 @@
 		5616A70B2860BA29006EFE81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5616A70D2860BA29006EFE81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5616A7122860BA29006EFE81 /* TODO_VIPERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TODO_VIPERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5616A7162860BA29006EFE81 /* TODO_VIPERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODO_VIPERTests.swift; sourceTree = "<group>"; };
 		5616A71C2860BA29006EFE81 /* TODO_VIPERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TODO_VIPERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5616A7202860BA29006EFE81 /* TODO_VIPERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODO_VIPERUITests.swift; sourceTree = "<group>"; };
-		5616A7222860BA29006EFE81 /* TODO_VIPERUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODO_VIPERUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5616A7202860BA29006EFE81 /* TODOVIPERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOVIPERUITests.swift; sourceTree = "<group>"; };
+		5616A7222860BA29006EFE81 /* TODOVIPERUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOVIPERUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5616A72F286138E5006EFE81 /* TodoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListTableViewCell.swift; sourceTree = "<group>"; };
 		5616A7312861F3A6006EFE81 /* TodoListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListEntity.swift; sourceTree = "<group>"; };
 		5616A73728620220006EFE81 /* TodoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRouter.swift; sourceTree = "<group>"; };
@@ -89,6 +100,19 @@
 		5616A76828672AB8006EFE81 /* DetailTodoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodoPresenter.swift; sourceTree = "<group>"; };
 		5616A76A28672AD0006EFE81 /* DetailTodoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodoRouter.swift; sourceTree = "<group>"; };
 		5616A76C2867399D006EFE81 /* UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
+		56529E702898076A00B5D7EB /* TodoListInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractorOutput.swift; sourceTree = "<group>"; };
+		56D6023628965BA10094A7C0 /* TodoListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractorTests.swift; sourceTree = "<group>"; };
+		56D6023828965C540094A7C0 /* TodoListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenterTests.swift; sourceTree = "<group>"; };
+		56D6023A28965DF50094A7C0 /* MockTodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodoListPresenter.swift; sourceTree = "<group>"; };
+		56D6023E28965F340094A7C0 /* MockTodoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodoListRouter.swift; sourceTree = "<group>"; };
+		56D602402896607A0094A7C0 /* MockTodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodoListView.swift; sourceTree = "<group>"; };
+		56D60242289660EE0094A7C0 /* MockTodoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodoListInteractor.swift; sourceTree = "<group>"; };
+		74C25CB9835D1164AAE6203A /* Pods-TODO_VIPER-TODO_VIPERUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO_VIPER-TODO_VIPERUITests.debug.xcconfig"; path = "Target Support Files/Pods-TODO_VIPER-TODO_VIPERUITests/Pods-TODO_VIPER-TODO_VIPERUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7B2A6BF0A8CE007FB6019CD1 /* Pods_TODO_VIPER_TODO_VIPERUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TODO_VIPER_TODO_VIPERUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86D8430063DEA68D3599F6FB /* Pods_TODO_VIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TODO_VIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86E1760E90CAB8BA55543AE6 /* Pods-TODO_VIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO_VIPER.debug.xcconfig"; path = "Target Support Files/Pods-TODO_VIPER/Pods-TODO_VIPER.debug.xcconfig"; sourceTree = "<group>"; };
+		9F39625B71AAFF9AE01DDFCD /* Pods_TODO_VIPERTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TODO_VIPERTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE63D1ECD15F228BCE4694D /* Pods-TODO_VIPER-TODO_VIPERUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO_VIPER-TODO_VIPERUITests.release.xcconfig"; path = "Target Support Files/Pods-TODO_VIPER-TODO_VIPERUITests/Pods-TODO_VIPER-TODO_VIPERUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A5B0CC9BE6E26809FA00C4B /* Pods_TODO_VIPER.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FBAFBA58AFA3A9BE569246C /* Pods_TODO_VIPERTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,12 +136,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E498224BDDBE3CE1796C88D /* Pods_TODO_VIPER_TODO_VIPERUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00B7C0EF2537456FFB132B0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86D8430063DEA68D3599F6FB /* Pods_TODO_VIPER.framework */,
+				7B2A6BF0A8CE007FB6019CD1 /* Pods_TODO_VIPER_TODO_VIPERUITests.framework */,
+				9F39625B71AAFF9AE01DDFCD /* Pods_TODO_VIPERTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		16D7578A210781CCFE5C317C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86E1760E90CAB8BA55543AE6 /* Pods-TODO_VIPER.debug.xcconfig */,
+				0C3C5CD53709362F574B449E /* Pods-TODO_VIPER.release.xcconfig */,
+				74C25CB9835D1164AAE6203A /* Pods-TODO_VIPER-TODO_VIPERUITests.debug.xcconfig */,
+				BDE63D1ECD15F228BCE4694D /* Pods-TODO_VIPER-TODO_VIPERUITests.release.xcconfig */,
+				51E0D7A380525F9601FFD946 /* Pods-TODO_VIPERTests.debug.xcconfig */,
+				41CE7CDC79EE655FEF7C3198 /* Pods-TODO_VIPERTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5616A6F32860BA28006EFE81 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +173,8 @@
 				5616A7152860BA29006EFE81 /* TODO_VIPERTests */,
 				5616A71F2860BA29006EFE81 /* TODO_VIPERUITests */,
 				5616A6FD2860BA28006EFE81 /* Products */,
+				16D7578A210781CCFE5C317C /* Pods */,
+				00B7C0EF2537456FFB132B0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,7 +207,7 @@
 		5616A7152860BA29006EFE81 /* TODO_VIPERTests */ = {
 			isa = PBXGroup;
 			children = (
-				5616A7162860BA29006EFE81 /* TODO_VIPERTests.swift */,
+				56D6023D28965EF60094A7C0 /* TodoList */,
 			);
 			path = TODO_VIPERTests;
 			sourceTree = "<group>";
@@ -163,8 +215,8 @@
 		5616A71F2860BA29006EFE81 /* TODO_VIPERUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5616A7202860BA29006EFE81 /* TODO_VIPERUITests.swift */,
-				5616A7222860BA29006EFE81 /* TODO_VIPERUITestsLaunchTests.swift */,
+				5616A7202860BA29006EFE81 /* TODOVIPERUITests.swift */,
+				5616A7222860BA29006EFE81 /* TODOVIPERUITestsLaunchTests.swift */,
 			);
 			path = TODO_VIPERUITests;
 			sourceTree = "<group>";
@@ -295,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				5616A75E2866A043006EFE81 /* TodoListInteractor.swift */,
+				56529E702898076A00B5D7EB /* TodoListInteractorOutput.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -339,6 +392,27 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		56D6023C28965EEA0094A7C0 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				56D6023A28965DF50094A7C0 /* MockTodoListPresenter.swift */,
+				56D6023E28965F340094A7C0 /* MockTodoListRouter.swift */,
+				56D602402896607A0094A7C0 /* MockTodoListView.swift */,
+				56D60242289660EE0094A7C0 /* MockTodoListInteractor.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		56D6023D28965EF60094A7C0 /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				56D6023628965BA10094A7C0 /* TodoListInteractorTests.swift */,
+				56D6023828965C540094A7C0 /* TodoListPresenterTests.swift */,
+				56D6023C28965EEA0094A7C0 /* Mock */,
+			);
+			path = TodoList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,9 +420,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5616A7262860BA29006EFE81 /* Build configuration list for PBXNativeTarget "TODO_VIPER" */;
 			buildPhases = (
+				F44CF6ECACAF7F3107648A0F /* [CP] Check Pods Manifest.lock */,
 				5616A6F82860BA28006EFE81 /* Sources */,
 				5616A6F92860BA28006EFE81 /* Frameworks */,
 				5616A6FA2860BA28006EFE81 /* Resources */,
+				7A42F6E5724E2F7C75138B6F /* [CP] Embed Pods Frameworks */,
+				56D602332894C9530094A7C0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -363,6 +440,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5616A7292860BA29006EFE81 /* Build configuration list for PBXNativeTarget "TODO_VIPERTests" */;
 			buildPhases = (
+				D28B38B6AB1C9EE9BE07D773 /* [CP] Check Pods Manifest.lock */,
 				5616A70E2860BA29006EFE81 /* Sources */,
 				5616A70F2860BA29006EFE81 /* Frameworks */,
 				5616A7102860BA29006EFE81 /* Resources */,
@@ -381,9 +459,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5616A72C2860BA29006EFE81 /* Build configuration list for PBXNativeTarget "TODO_VIPERUITests" */;
 			buildPhases = (
+				949D97891FF86A76EC1DECA8 /* [CP] Check Pods Manifest.lock */,
 				5616A7182860BA29006EFE81 /* Sources */,
 				5616A7192860BA29006EFE81 /* Frameworks */,
 				5616A71A2860BA29006EFE81 /* Resources */,
+				9B2C46E8F1B74D28411B9383 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -467,6 +547,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		56D602332894C9530094A7C0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		7A42F6E5724E2F7C75138B6F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TODO_VIPER/Pods-TODO_VIPER-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TODO_VIPER/Pods-TODO_VIPER-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TODO_VIPER/Pods-TODO_VIPER-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		949D97891FF86A76EC1DECA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TODO_VIPER-TODO_VIPERUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B2C46E8F1B74D28411B9383 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TODO_VIPER-TODO_VIPERUITests/Pods-TODO_VIPER-TODO_VIPERUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TODO_VIPER-TODO_VIPERUITests/Pods-TODO_VIPER-TODO_VIPERUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TODO_VIPER-TODO_VIPERUITests/Pods-TODO_VIPER-TODO_VIPERUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D28B38B6AB1C9EE9BE07D773 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TODO_VIPERTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F44CF6ECACAF7F3107648A0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TODO_VIPER-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5616A6F82860BA28006EFE81 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -489,6 +689,7 @@
 				5616A76728672AA8006EFE81 /* DetailTodoInteractor.swift in Sources */,
 				5616A7022860BA28006EFE81 /* SceneDelegate.swift in Sources */,
 				5616A730286138E5006EFE81 /* TodoListTableViewCell.swift in Sources */,
+				56529E712898076A00B5D7EB /* TodoListInteractorOutput.swift in Sources */,
 				5616A73A2862023F006EFE81 /* AddTodoRouter.swift in Sources */,
 				5616A740286281DD006EFE81 /* TodoListPresenter.swift in Sources */,
 				5616A75928668854006EFE81 /* AddTodoPresenter.swift in Sources */,
@@ -500,7 +701,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5616A7172860BA29006EFE81 /* TODO_VIPERTests.swift in Sources */,
+				56D6023F28965F340094A7C0 /* MockTodoListRouter.swift in Sources */,
+				56D6023928965C540094A7C0 /* TodoListPresenterTests.swift in Sources */,
+				56D60243289660EE0094A7C0 /* MockTodoListInteractor.swift in Sources */,
+				56D6023728965BA10094A7C0 /* TodoListInteractorTests.swift in Sources */,
+				56D6023B28965DF50094A7C0 /* MockTodoListPresenter.swift in Sources */,
+				56D602412896607A0094A7C0 /* MockTodoListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,8 +714,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5616A7212860BA29006EFE81 /* TODO_VIPERUITests.swift in Sources */,
-				5616A7232860BA29006EFE81 /* TODO_VIPERUITestsLaunchTests.swift in Sources */,
+				5616A7212860BA29006EFE81 /* TODOVIPERUITests.swift in Sources */,
+				5616A7232860BA29006EFE81 /* TODOVIPERUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,6 +870,7 @@
 		};
 		5616A7272860BA29006EFE81 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86E1760E90CAB8BA55543AE6 /* Pods-TODO_VIPER.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -691,6 +898,7 @@
 		};
 		5616A7282860BA29006EFE81 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C3C5CD53709362F574B449E /* Pods-TODO_VIPER.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -718,6 +926,7 @@
 		};
 		5616A72A2860BA29006EFE81 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51E0D7A380525F9601FFD946 /* Pods-TODO_VIPERTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -738,6 +947,7 @@
 		};
 		5616A72B2860BA29006EFE81 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41CE7CDC79EE655FEF7C3198 /* Pods-TODO_VIPERTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -758,6 +968,7 @@
 		};
 		5616A72D2860BA29006EFE81 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74C25CB9835D1164AAE6203A /* Pods-TODO_VIPER-TODO_VIPERUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -776,6 +987,7 @@
 		};
 		5616A72E2860BA29006EFE81 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDE63D1ECD15F228BCE4694D /* Pods-TODO_VIPER-TODO_VIPERUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

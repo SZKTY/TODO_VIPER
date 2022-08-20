@@ -15,11 +15,11 @@ protocol TodoListWireframe: AnyObject {
 final class TodoListRouter {
     // 画面遷移のためにViewControllerが必要。initで受け取る
     private unowned let viewController: UIViewController
-    
+
     private init(viewController: UIViewController) {
         self.viewController = viewController
     }
-    
+
     static func assembleModules() -> UIViewController {
         let view = UIStoryboard.todoList.instantiateInitialViewController() as! TodoListViewController
         let intractor = TodoListInteractor()
@@ -40,7 +40,7 @@ extension TodoListRouter: TodoListWireframe {
         let next = AddTodoRouter.assembleModules()
         viewController.show(next: next)
     }
-    
+
     func detailTodo(row: Int) {
         let next = DetailTodoRouter.assembleModules(row: row)
         viewController.show(next: next)

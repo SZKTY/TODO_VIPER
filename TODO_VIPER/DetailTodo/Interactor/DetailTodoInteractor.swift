@@ -22,7 +22,7 @@ extension DetailTodoInteractor: DetailTodoUsecase {
         let todo: [String] = todos[todoId]
         self.presenter?.didFetchTodo(todo: todo)
     }
-    
+
     func finishTodo(todoId: Int) {
         guard var todos = UserDefaults.standard.object(forKey: .todoList) as? [[String]] else { return }
         todos.remove(at: todoId)

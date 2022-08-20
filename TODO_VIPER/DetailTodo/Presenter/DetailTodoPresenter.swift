@@ -20,39 +20,35 @@ final class DetailTodoPresenter {
     private let interactor: DetailTodoInteractor
     private let router: DetailTodoRouter
     var row: Int
-    
+
     init(view: DetailTodoView,
          interactor: DetailTodoInteractor,
          router: DetailTodoRouter,
-         row: Int
-    ){
+         row: Int) {
         self.view = view
         self.interactor = interactor
         self.router = router
         self.row = row
-        
     }
-    
 }
 
 extension DetailTodoPresenter: DetailTodoPresentaion {
-    
     func tappedBackButton() {
         self.router.tappedBackButton()
     }
-    
+
     func viewWillAppear() {
         self.interactor.fetchTodo(todoId: self.row)
     }
-    
+
     func didFetchTodo(todo: [String]) {
         self.view?.showTodo(todo: todo)
     }
-    
+
     func finishTodo() {
         self.interactor.finishTodo(todoId: row)
     }
-    
+
     func deletedTodo() {
         self.router.deletedTodo()
     }

@@ -11,18 +11,18 @@ protocol Finish: AnyObject {
     func tappedFinishButton(row: Int)
 }
 
-class TodoListTableViewCell : UITableViewCell {
-    
+class TodoListTableViewCell: UITableViewCell {
+
     @IBOutlet weak var tittleLabel: UILabel!
     @IBOutlet weak var checkButton: UIButton!
-    
+
     weak var delegate: Finish?
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         checkButton.addTarget(self, action: #selector(tappedFinishButton), for: .touchUpInside)
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

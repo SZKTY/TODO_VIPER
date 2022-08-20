@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AddTodoUsecase: AnyObject{
+protocol AddTodoUsecase: AnyObject {
     func saveTodo(todo: [String])
 }
 
@@ -17,7 +17,7 @@ final class AddTodoInteractor {
 
 extension AddTodoInteractor: AddTodoUsecase {
     func saveTodo(todo: [String]) {
-        
+
         if UserDefaults.standard.object(forKey: .todoList) != nil {
             var todoKobetsunonakami = UserDefaults.standard.object(forKey: .todoList) as! [[String]]
             todoKobetsunonakami.append(todo)

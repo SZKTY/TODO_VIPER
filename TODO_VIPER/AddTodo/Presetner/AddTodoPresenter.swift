@@ -13,14 +13,14 @@ protocol AddTodoPresentaion: AnyObject {
 }
 
 final class AddTodoPresenter {
-    
+
     private weak var view: AddTodoView?
     private let interactor: AddTodoInteractor
     private let router: AddTodoRouter
-    
+
     init(view: AddTodoView,
          interactor: AddTodoInteractor,
-         router: AddTodoRouter){
+         router: AddTodoRouter) {
         self.view = view
         self.interactor = interactor
         self.router = router
@@ -28,13 +28,13 @@ final class AddTodoPresenter {
 }
 
 extension AddTodoPresenter: AddTodoPresentaion {
-    
+
     func tappedSaveButton(todo: [String]) {
         self.interactor.saveTodo(todo: todo)
     }
-    
+
     func addedTodo(row: Int) {
         self.router.addedTodo(row: row)
     }
-    
+
 }
