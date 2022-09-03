@@ -12,18 +12,19 @@ protocol DetailTodoPresentaion: AnyObject {
     func viewWillAppear()
     func didFetchTodo(todo: [String])
     func finishTodo()
-    func deletedTodo()
+    func deletedTodo(todos: [[String]])
+    func savedTodo()
 }
 
 final class DetailTodoPresenter {
     private weak var view: DetailTodoView?
-    private let interactor: DetailTodoInteractor
-    private let router: DetailTodoRouter
+    private let interactor: DetailTodoUsecase
+    private let router: DetailTodoWireframe
     var row: Int
 
     init(view: DetailTodoView,
-         interactor: DetailTodoInteractor,
-         router: DetailTodoRouter,
+         interactor: DetailTodoUsecase,
+         router: DetailTodoWireframe,
          row: Int) {
         self.view = view
         self.interactor = interactor
@@ -49,7 +50,11 @@ extension DetailTodoPresenter: DetailTodoPresentaion {
         self.interactor.finishTodo(todoId: row)
     }
 
-    func deletedTodo() {
+    func deletedTodo(todos: [[String]]) {
+        self.interactor.saveTodo(todos: todos)
+    }
+    
+    func savedTodo() {
         self.router.deletedTodo()
     }
 }

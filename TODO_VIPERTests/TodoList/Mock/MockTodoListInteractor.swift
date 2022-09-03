@@ -25,9 +25,11 @@ class MockTodoListInteractor: TodoListUsecase {
 class MockTodoListInteractorOutput: TodoListInteractorOutput {
     var callCountGetSuccess = 0
     var callCountGetFailure = 0
+    var result: [[String]]? = nil
     
     func getSuccess(_ todos: [[String]]) {
         callCountGetSuccess += 1
+        result = todos
     }
     
     func getFailure() {

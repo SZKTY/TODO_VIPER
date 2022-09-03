@@ -20,7 +20,7 @@ final class TodoListInteractor {
     private let userDefaults: UserDefaults
     
     init(userDefaults: UserDefaults = UserDefaults.standard) {
-        self.userDefaults = userDefaultscd
+        self.userDefaults = userDefaults
     }
 }
 

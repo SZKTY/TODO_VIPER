@@ -15,12 +15,12 @@ protocol AddTodoPresentaion: AnyObject {
 final class AddTodoPresenter {
 
     private weak var view: AddTodoView?
-    private let interactor: AddTodoInteractor
-    private let router: AddTodoRouter
+    private let interactor: AddTodoUsecase
+    private let router: AddTodoWireframe
 
     init(view: AddTodoView,
-         interactor: AddTodoInteractor,
-         router: AddTodoRouter) {
+         interactor: AddTodoUsecase,
+         router: AddTodoWireframe) {
         self.view = view
         self.interactor = interactor
         self.router = router

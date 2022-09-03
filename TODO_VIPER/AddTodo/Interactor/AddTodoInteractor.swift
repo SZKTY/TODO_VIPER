@@ -13,19 +13,24 @@ protocol AddTodoUsecase: AnyObject {
 
 final class AddTodoInteractor {
     weak var presenter: AddTodoPresentaion?
+    private let userDefaults: UserDefaults
+    
+    init(userDefaults: UserDefaults = UserDefaults.standard) {
+        self.userDefaults = userDefaults
+    }
 }
 
 extension AddTodoInteractor: AddTodoUsecase {
     func saveTodo(todo: [String]) {
 
-        if UserDefaults.standard.object(forKey: .todoList) != nil {
-            var todoKobetsunonakami = UserDefaults.standard.object(forKey: .todoList) as! [[String]]
+        if userDefaults.object(forKey: .todoList) != nil {
+            var todoKobetsunonakami = userDefaults.object(forKey: .todoList) as! [[String]]
             todoKobetsunonakami.append(todo)
-            UserDefaults.standard.set(todoKobetsunonakami, forKey: .todoList)
+            userDefaults.set(todoKobetsunonakami, forKey: .todoList)
             presenter?.addedTodo(row: todoKobetsunonakami.count - 1)
         } else {
             let matrixTodo: [[String]] = [todo]
-            UserDefaults.standard.set(matrixTodo, forKey: .todoList)
+            userDefaults.set(matrixTodo, forKey: .todoList)
             presenter?.addedTodo(row: 0)
         }
     }

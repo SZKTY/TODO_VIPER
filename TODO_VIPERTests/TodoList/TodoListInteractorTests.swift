@@ -26,6 +26,16 @@ class TodoListInteractorTests: XCTestCase {
     
     func testFetchTodos() {
         let testTarget = dependency.testTarget
+        dependency.userDefaults.set([["a", "b"]], forKey: .todoList)
+        testTarget.output = output
+        testTarget.fetchTodos()
+        XCTAssertEqual(output.callCountGetSuccess, 1)
+        XCTAssertEqual(output.result, [["a", "b"]])
+        XCTAssertEqual(output.callCountGetFailure, 0)
+    }
+    
+    func testFetchTodos_empty() {
+        let testTarget = dependency.testTarget
         testTarget.output = output
         testTarget.fetchTodos()
         XCTAssertEqual(output.callCountGetSuccess, 0)

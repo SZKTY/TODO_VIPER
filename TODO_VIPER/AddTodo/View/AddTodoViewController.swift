@@ -33,7 +33,7 @@ class AddTodoViewController: UIViewController {
         saveButton.addTarget(self, action: #selector(tappedSaveButton), for: .touchUpInside)
     }
 
-    func inject(presenter: AddTodoPresentaion) {
+    func inject(presenter: AddTodoPresenter) {
         self.presenter = presenter
     }
 }
