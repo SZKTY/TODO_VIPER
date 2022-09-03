@@ -21,7 +21,6 @@ class AddTodoInteractorTests: XCTestCase {
     override func tearDownWithError() throws {
         self.setUp()
         dependency.removeUserDefaults()
-        UserDefaults.standard.removeObject(forKey: .todoList)
     }
     
     func testSaveTodo() {

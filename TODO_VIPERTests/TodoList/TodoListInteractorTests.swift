@@ -46,9 +46,11 @@ class TodoListInteractorTests: XCTestCase {
         let testTarget = dependency.testTarget
         testTarget.output = output
         testTarget.presenter = presenter
+        dependency.userDefaults.set([["a", "b"]], forKey: .todoList)
         testTarget.deleteTodo(row: 0)
-        XCTAssertEqual(presenter.callCountViewWillAppear, 0)
-        XCTAssertEqual(output.callCountGetFailure, 1)
+        XCTAssertEqual(presenter.callCountViewWillAppear, 1)
+        XCTAssertEqual(presenter.todos, [])
+        XCTAssertEqual(output.callCountGetFailure, 0)
     }
 }
 

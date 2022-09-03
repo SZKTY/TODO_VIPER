@@ -39,7 +39,7 @@ class TodoListPresenterTests: XCTestCase {
     
     func testDidSelect() {
         presenter.didSelect(row: 1)
-        XCTAssertEqual(router.callCountAddTodo, 1)
+        XCTAssertEqual(router.callCountDetailTodo, 1)
     }
     
     func testTappedFinishButton() {
